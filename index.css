@@ -5,9 +5,20 @@ body {
     background-size: cover;
 }
 
+#hideElement{
+    visibility: hidden;
+}
+
 h1 {
     color: goldenrod;
     font-size: 40px;
+}
+
+input {
+    background-color: goldenrod;
+    color: #016f32;
+    font-size: 24px;
+    font-family: inherit;
 }
 
 p {

@@ -1,7 +1,31 @@
 let player = {
-    name: "Arp",
-    chips: 145
+    name: "Player",
+    chips: 200
 }
+
+document.getElementById("submit").addEventListener("click", () => {
+    const input = document.getElementById("username-el").value;
+        player.name = input;
+});
+
+function hideElement() {
+    if(player.name !== ""){
+        const element = document.querySelector("#user");
+        element.id = "hideElement";
+        console.log(element);
+    }
+}
+
+function showElement() {
+    let element = document.querySelector("#hideElement");
+    if (element != null) {
+        element.id = "";
+    } else {
+        return null;
+    }
+}
+
+    showElement();
 
 let cards = [];
 let sum = 0;
