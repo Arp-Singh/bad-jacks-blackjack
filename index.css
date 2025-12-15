@@ -19,7 +19,18 @@ input {
     color: #016f32;
     font-size: 24px;
     font-family: inherit;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    
 }
+
+::placeholder {
+    color: #016f32;
+    opacity: 0.7;
+}
+
+
 
 p {
     color: whitesmoke;
@@ -55,4 +66,21 @@ button:hover {
 button:active {
     scale: 0.95;
     transition-duration: 0.1s;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav ul li img {
+        background: goldenrod;
+        padding: 4px;
+        width: 32px;
+        border-radius: 5px;
+        cursor: pointer;
 }

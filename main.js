@@ -5,15 +5,18 @@ let player = {
 
 document.getElementById("submit").addEventListener("click", () => {
     const input = document.getElementById("username-el").value;
-        player.name = input;
+    player.name = input;
+    if (player.name === "") {
+        player.name = "Player";
+    } 
+    hideElement();
 });
 
 function hideElement() {
-    if(player.name !== ""){
         const element = document.querySelector("#user");
         element.id = "hideElement";
         console.log(element);
-    }
+
 }
 
 function showElement() {
@@ -24,8 +27,6 @@ function showElement() {
         return null;
     }
 }
-
-    showElement();
 
 let cards = [];
 let sum = 0;
@@ -46,7 +47,6 @@ function startGame() {
     cards = [firstCard, secondCard];
     sum = cards[0] + cards[1];
     renderGame();
-    
 }
 
 function getRandomCard() {
@@ -78,6 +78,7 @@ function renderGame() {
     
     messageEl.textContent = message;
     playerEl.textContent = player.name + ": £" + player.chips; 
+    hideElement();
 }
 
 function newCard() {
