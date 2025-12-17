@@ -9,6 +9,10 @@ body {
     visibility: hidden;
 }
 
+#player-el {
+    white-space: pre-line;
+}
+
 h1 {
     color: goldenrod;
     font-size: 40px;

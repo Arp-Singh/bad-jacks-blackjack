@@ -28,6 +28,7 @@ A simple game of blackjack made with HTML, CSS and Vanilla JavaScript. It's main
 - For loops
 - The Math object
 - Return statements
+- DOM Manipulation
 
 ### Features
 
@@ -35,6 +36,7 @@ A simple game of blackjack made with HTML, CSS and Vanilla JavaScript. It's main
 - The cards dealt are displayed on screen, as well as the sum of those cards. 
 - Clicking on "New Card" should give a random new card drawn.
 - Winning gives you "Blackjack!". Losing gives you "You've gone bust" and if you haven't hit either then you get a message asking "Do you want to draw another card?"
+- You can customize your username! 
 
 ### Showcase
 
@@ -66,7 +68,7 @@ A simple game of blackjack made with HTML, CSS and Vanilla JavaScript. It's main
 Future updates will include:
 - Implementing Semantic HTML for better code practices.
 - Change the design of the game to have a more dark, late night casino vibe. I want users to feel oddly cold but find some comfort in certain aspects like the cards or perhaps the occasional talk from the dealer.
-- Create a prompt for usernames, store and display these on screen for a more personal feel to the game.
+- ~Create a prompt for usernames, store and display these on screen for a more personal feel to the game.~ (**FEATURE ADDED AS 17/12/2025**).
 - Add an AI to play against:
     - Bob (Nicknamed Hammer)
     - Jill (Jack and Jill)

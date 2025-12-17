@@ -1,7 +1,9 @@
 let player = {
     name: "Player",
-    chips: 200
+    chips: 200,
+    bet: 10
 }
+
 let cards = [];
 let sum = 0;
 let hasBlackJack = false;
@@ -20,9 +22,21 @@ document.getElementById("submit").addEventListener("click", () => {
     if (player.name === "") {
         player.name = "Player";
     } 
+    renderGame();
 });
 
+function higherBet() {
+    if (player.bet < player.chips) {
+        player.bet += 5;
+    } 
+    renderGame();
+}
 
+
+function lowerBet() {
+    player.bet -= 5;
+    renderGame();
+}
 
 function startGame() {
     isAlive = true;
@@ -54,15 +68,16 @@ function renderGame() {
         message = "Do you want to draw a card?";
     } else if (sum === 21) {
         message = "BLACKJACK!!!";
+        player.chips += (player.bet*1.5);
         hasBlackJack = true;
     } else {
         message = "YOU'VE GONE BUST";
+        player.chips -= player.bet;
         isAlive = false;
     }
     
     messageEl.textContent = message;
-    playerEl.textContent = player.name + ": £" + player.chips; 
-    hideElement();
+    playerEl.textContent = player.name + ": £" + player.chips + "\r\nYour bet: £" + player.bet; 
 }
 
 function newCard() {
@@ -77,7 +92,6 @@ function newCard() {
 function hideElement() {
         let element = document.querySelector("#user");
         element.id = "hideElement";
-        console.log(element);
 }
 
 function showElement() {
