@@ -2,32 +2,6 @@ let player = {
     name: "Player",
     chips: 200
 }
-
-document.getElementById("submit").addEventListener("click", () => {
-    const input = document.getElementById("username-el").value;
-    player.name = input;
-    if (player.name === "") {
-        player.name = "Player";
-    } 
-    hideElement();
-});
-
-function hideElement() {
-        const element = document.querySelector("#user");
-        element.id = "hideElement";
-        console.log(element);
-
-}
-
-function showElement() {
-    let element = document.querySelector("#hideElement");
-    if (element != null) {
-        element.id = "";
-    } else {
-        return null;
-    }
-}
-
 let cards = [];
 let sum = 0;
 let hasBlackJack = false;
@@ -37,6 +11,16 @@ let cardsEl = document.querySelector("#cards-el");
 let sumEl = document.querySelector("#sum-el");
 let messageEl = document.getElementById("message-el");
 let playerEl = document.getElementById("player-el");
+
+document.getElementById("submit").addEventListener("click", () => {
+    const input = document.getElementById("username-el").value;
+    console.log(input);
+    player.name = input;
+    console.log(input);
+    if (player.name === "") {
+        player.name = "Player";
+    } 
+});
 
 
 
@@ -88,4 +72,17 @@ function newCard() {
         cards.push(card);
     }
     renderGame();
+}
+
+function hideElement() {
+        let element = document.querySelector("#user");
+        element.id = "hideElement";
+        console.log(element);
+}
+
+function showElement() {
+    let element = document.querySelector("#hideElement");
+    if (element != null) {
+        element.id = "user";
+    }
 }
