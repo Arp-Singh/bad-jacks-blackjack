@@ -1,6 +1,6 @@
 # Bad Jacks Blackjack
 
-[LIVE SITE HERE]()
+[LIVE SITE HERE](https://arp-singh.github.io/bad-jacks-blackjack/)
 
 ## Table of contents
 
